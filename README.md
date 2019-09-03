@@ -2,7 +2,7 @@
 
 ## In this course we will cover the following topics:
 
-1. Basics of Digital Signal Processing
+### 1. Basics of Digital Signal Processing
 
   1.1. Introduction to DSP
 
@@ -12,11 +12,15 @@
   
   1.4. Complex exponentials
 
-2. Vector spaces
-2.1. Signal processing and vector spaces
-2.2. Vector spaces
-2.3. Bases
-2.4. Subspaces and approximations
+### 2. Vector spaces
+
+  2.1. Signal processing and vector spaces
+
+  2.2. Vector spaces
+
+  2.3. Bases
+
+  2.4. Subspaces and approximations
 
 3. Basics of Fourier Analysis
 3.1. Introduction to Fourier Analysis
