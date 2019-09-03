@@ -47,9 +47,12 @@
 6.3. Controlling the power
 6.4. Modulation and demodulation
 6.5. Receiver design
-6.6. ADSL7. Image Processing
+6.6. ADSL
+
+7. Image Processing
 
 7.1. Intro to image processing
+
 7.2. Image manipulations
 7.3. Frequency analysis
 7.4. Image filtering
