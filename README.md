@@ -4,13 +4,13 @@
 
 ### 1. Basics of Digital Signal Processing
 
-  1.1. Introduction to DSP
+    1.1. Introduction to DSP
 
-  1.2. Discrete-time signals
+    1.2. Discrete-time signals
   
-  1.3. Basic signal processing
+    1.3. Basic signal processing
   
-  1.4. Complex exponentials
+    1.4. Complex exponentials
 
 ### 2. Vector spaces
 
