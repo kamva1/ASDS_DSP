@@ -1,4 +1,4 @@
-# Applied Statistics and Data Science: Digital signal processing course 
+# Digital Signal Processing Course 
 
 ## In this course we will cover the following topics:
 
