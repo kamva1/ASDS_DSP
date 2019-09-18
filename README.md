@@ -1,7 +1,5 @@
 # Digital Signal Processing Course 
 
-## In this course we will cover the following topics:
-
 ### 1. Basics of Digital Signal Processing
 
     1.1. Introduction to DSP
