@@ -47,7 +47,9 @@ def read_audio(path, file_name):
     '''
     rate, data = wavfile.read(str(path) + str(file_name))
     # data, rate = librosa.load(str(path) + str(filename))
-    data = data.astype('int16')
+    data = data.astype('float')
+    if np.mean(data**2) < 1:
+        data = data * 2**15
     return rate, data
 
 def write_audio(path, filename,  rate, data):

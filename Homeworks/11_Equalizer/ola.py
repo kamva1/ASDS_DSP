@@ -9,6 +9,7 @@ import scipy.io.wavfile as file
 import glob
 import math
 import matplotlib.pyplot as plt
+import librosa
 
 class OLA:
     def __init__(self):
@@ -18,6 +19,7 @@ class OLA:
         self.frame_len = self.frame_dur * self.sample_rate // 1000
         self.coef_no = self.frame_len // 2 + 1
         self.shift = self.frame_len // 2
+        self.n_mels = 26
 
     def lin_resp(self, n):
         resp = np.array([i/n for i in range(n)])
@@ -34,6 +36,26 @@ class OLA:
         x[0:n//2] = 1
         x[n//2:] = 0
         return x
+    
+    def equalizer(self, **kwargs):
+        def lin2db(lin_val):
+            return 10 * np.log10(lin_val)
+
+        def db2lin(db_val):
+            return 10 ** (db_val / 10)
+
+        db_s = np.zeros(self.n_mels)
+
+        for arg, value in zip(kwargs, kwargs.values()):
+            db_s[int(arg[2:])] = lin2db(value)
+
+        mels = librosa.filters.mel(sr=self.sample_rate, n_fft=512, n_mels=self.n_mels, fmin=0, fmax=self.sample_rate/2)
+        mels /= np.max(mels, axis=-1)[:, None]
+
+        for i in range(mels.shape[0]):
+            mels[i] = mels[i] * db_s[i]
+
+        return db2lin(np.sum(mels, axis=0))
 
 
     def test(self, in_data, resp):
